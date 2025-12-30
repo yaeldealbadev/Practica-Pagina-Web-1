@@ -69,23 +69,44 @@ main footer {
   line-height: 1.6;
   color: #333;
 }
-.Desarrollo-Software, .Desarrollo-Web {
+.Desarrollo-Software,
+.Desarrollo-Web {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 15px;
   padding: 20px;
   border-top: 1px solid #eee;
 }
-.Desarrollo-Software bottom, .Desarrollo-Web bottom {
+.titulo-skills{
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+.Desarrollo-Software button,
+.Desarrollo-Web button {
   background: #eaeeff;
   color: rgb(0, 0, 0);
   padding: 6px 15px;
+  border: none;
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
   cursor: pointer;
 }
-.Desarrollo-Software bottom:hover, .Desarrollo-Web bottom:hover {
+.Desarrollo-Software button:hover,
+.Desarrollo-Web button:hover {
   background: #667eea;
   transform: scale(1.05);
 }
@@ -93,6 +114,57 @@ main .descripcion p {
   text-align: justify;
   color: #555;
 }
-main .descripcion p:last-child {
-  margin-bottom: 0;
+footer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+footer button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer button:hover {
+  transform: scale(1.1);
+}
+.btn-github {
+  background: #333;
+}
+
+.btn-linkedin {
+  background: #0077b5;
+}
+
+.btn-email {
+  background: #ea4335;
+}
+
+.btn-portafolio {
+  background: #667eea;
+}
+
+.social-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 480px) {
+  .card {
+    margin: 10px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
 }
