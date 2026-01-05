@@ -56,8 +56,9 @@ header .titulo h3 {
   color: #d0ff00;
   font-weight: 400;
 }
-main div {
-  padding: 20px;
+main .descripcion {
+  padding: 20px 20px 0px 20px;
+  margin-bottom: 0px;
 }
 main div p {
   margin-bottom: 15px;
@@ -155,16 +156,33 @@ footer button:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @media (max-width: 480px) {
-  .card {
-    margin: 10px;
+  header {
+    flex-direction: column;
+    text-align: center;
   }
-
-  .name {
-    font-size: 24px;
+  
+  header .titulo {
+    margin-left: 0;
+    margin-top: 15px;
   }
-
-  .card-body {
-    padding: 20px;
+  
+  header .titulo h1 {
+    font-size: 1.4em;
+  }
+  
+  .skills button {
+    font-size: 12px;
+    padding: 5px 12px;
   }
 }
